@@ -18,7 +18,6 @@ if __name__ == '__main__':
     auth_token = os.getenv('MOMENTO_AUTH_TOKEN')
 
     if is_base64(auth_token):
-        print("decode")
         decode_b64_token = base64.b64decode(auth_token).decode('utf-8')
         decode_info = json.loads(decode_b64_token)
         print(decode_info)
